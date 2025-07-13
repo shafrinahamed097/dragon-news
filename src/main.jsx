@@ -6,34 +6,43 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import HomeLayout from "./layout/HomeLayout/HomeLayout.jsx";
+import About from "./components/About/About.jsx";
+import Career from "./components/Career/Career.jsx";
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <HomeLayout />
-    
+    path: "/",
+    element: <HomeLayout />,
   },
-   {
-        path: '/new',
-        element: <h1>Home Layout</h1>
-      },
-      {
-        path: '/news',
-        element: <h1>News Layout</h1>
-      },
-      {
-        path: '/auth',
-        element: <h1>Login in</h1>
-      },
-      {
-        path: '*',
-        element: <h1>Error</h1>
-      } 
-  
+  {
+    path: "/new",
+    element: <h1>Home Layout</h1>,
+  },
+  {
+    path: "/news",
+    element: <h1>News Layout</h1>,
+  },
+  {
+    path: "/auth",
+    element: <h1>Login in</h1>,
+  },
+  {
+    path:"/about",
+    element: <About />
+  },
+  {
+    path:'/career',
+    element: <Career />
+
+  },
+  {
+    path: "*",
+    element: <h1>Error</h1>,
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-   <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </StrictMode>
 );

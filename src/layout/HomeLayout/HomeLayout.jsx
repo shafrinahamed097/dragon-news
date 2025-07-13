@@ -2,16 +2,25 @@ import React from "react";
 import Header from "../../components/Header/Header";
 import BreakingNews from "../../components/BreakingNews/BreakingNews";
 
-// import Navbar from "../../components/Navbar/Navbar";
+import Navbar from "../../components/Navbar/Navbar";
 
 const HomeLayout = () => {
   return (
     <div>
-      {/* <Navbar /> */}
       <Header />
+
       <section className="w-11/12 mx-auto">
         <BreakingNews />
       </section>
+
+      <nav className="w-11/12 mx-auto py-2">
+        <Navbar />
+      </nav>
+      <main className="w-11/12 mx-auto pt-5 grid md:grid-cols-12 gap-3">
+        <aside className="left col-span-3">Left Navbar</aside>
+        <section className="col-span-6">Main Content</section>
+        <aside className="col-span-3">Right Navar</aside>
+      </main>
     </div>
   );
 };
